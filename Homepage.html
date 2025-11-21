@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Exhibit</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,800;1,300;1,800&display=swap');
+
+        :root {
+            --primary-color: #DF927D;
+            --secondary-color: #003558;
+            --accent-color: #7E7AF9;
+            --background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: url('vangogh.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: grid;
+            grid-template-rows: auto 1fr;
+        }
+
+        header {
+            background-color: var(--background-color);
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        li a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: background-color 0.4s;
+        }
+
+        li a:hover,
+        .active {
+            background-color: var(--primary-color);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            background-color: transparent;
+            color: var(--accent-color);
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        /* Home Content */
+        .home-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .home-container {
+            max-width: 1200px;
+            padding: 2rem;
+            background-color: var(--background-color);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .home-container h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        /* Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .grid-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .grid-item p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #try-now {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        #explore {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><h1>Art Exhibit</h1></div>
+            <div class="links">
+                <ul>
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="login-sec">
+                <a href="Login.html"><button>Login</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="home-content">
+        <div class="home-container">
+            <h1>Art Exhibit</h1>
+
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="C:/VILIA/ThePotatoEaters.jpg" alt="The Potato Eaters">
+                    <h3>The Potato Eaters (1885)</h3>
+                    <p>This early canvas is considered Van Gogh's first masterpiece. Painted while living among the peasants and laborers in Nuenen in the Netherlands, Van Gogh strove to depict the people and their lives truthfully.</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="C:/VILIA/self-portrait.jpg" alt="Vincent van Gogh Self-portrait">
+                    <h3>Self-portrait (1887)</h3>
+                    <p>This self-portrait by Van Gogh showcases his experimentation with Neo-Impressionism during 1887.</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="C:/VILIA/StarryNight.jpg" alt="Starry Night">
+                    <h3>Starry Night (1889)</h3>
+                    <p>Starry Night is often considered Van Gogh's pinnacle achievement. Painted from memory, it captures an emotional landscape through bold brushstrokes.</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="Login.html"><button id="try-now">Try Now</button></a>
+                <a href="Services.html"><button id="explore">Explore</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
